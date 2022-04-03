@@ -3,7 +3,7 @@
 	import '../app.css';
 
 	import Twitter from '$lib/icons/Twitter.svelte'; 
-	import LinkedIn from '$lib/icons/LinkedIn.svelte';
+	import LinkedIn from '$lib/icons/Linkedin.svelte';
 	import Github from '$lib/icons/Github.svelte';
 </script>
 
