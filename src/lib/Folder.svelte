@@ -82,6 +82,10 @@
         margin: .5rem;
     }
 
+    h2, h3, h4 {
+        cursor: pointer;
+    }
+
     ul {
         list-style: none;
     }

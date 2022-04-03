@@ -13,7 +13,7 @@
 		<p>
 			Hello! My name is Thomas and I'm a full-stack developer working for <a href="https://unimicro.no">Uni Micro AS</a> in Bergen. 
 			I have a passion for system architecture and performance optimization. 
-			I have been working with software development for 4&nbsp;years, creating and maintaining frontend with different frameworks <br/>and REST APIs in ASP.NET.
+			I have been working with software development for 4&nbsp;years, creating and maintaining frontend with different frameworks and REST APIs in ASP.NET.
 		</p>
 		<SkillList />
 	</section>
