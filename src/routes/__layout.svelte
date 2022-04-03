@@ -1,45 +1,72 @@
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
+
+	import Twitter from 'svelte-material-icons/Twitter.svelte'; 
+	import LinkedIn from 'svelte-material-icons/LinkedIn.svelte';
+	import Github from 'svelte-material-icons/Github.svelte';
 </script>
 
 <Header />
 
+<aside>
+	<a href="https://www.twitter.com/tagptroll1">
+		<Twitter />
+	</a>
+	<a href="https://www.linkedin.com/in/thomasagpetersson/">
+		<LinkedIn />
+	</a>
+	<a href="https://www.github.com/tagptroll1">
+		<Github />
+	</a>
+</aside>
 <main>
 	<slot />
 </main>
 
-<footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
 
 <style>
 	main {
-		flex: 1;
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
 		width: 100%;
 		max-width: 1024px;
+		min-height: 80vh;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
 
-	footer {
+	aside {
+		height: 100%;
+		padding-bottom: 160px;
+
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
+		flex-direction: column-reverse;
+		gap: 1rem;
+
+		position: fixed;
+		bottom: 0;
+		left: 5%;
+		
+		font-size: 3rem;
 	}
 
-	footer a {
-		font-weight: bold;
+	aside a {
+		color: var(--text-color);
 	}
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
+	aside::after {
+		content: '';
+		display: block;
+		width: 1px;
+		height: 150px;
+
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+
+		background: var(--text-color);
 	}
+
 </style>

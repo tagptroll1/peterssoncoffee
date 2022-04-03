@@ -8,7 +8,7 @@
 	--primary-color: #b9c6d2;
 	--secondary-color: #d0dde9;
 	--tertiary-color: #edf0f8;
-	--accent-color: #ff3e00;
+	--accent-color: #f6004e;
 	--heading-color: rgba(0, 0, 0, 0.7);
 	--text-color: #444444;
 	--background-without-opacity: rgba(255, 255, 255, 0.7);
@@ -52,6 +52,8 @@ body::before {
 
 h1,
 h2,
+h3,
+h4,
 p {
 	font-weight: 400;
 	color: var(--heading-color);
@@ -71,11 +73,19 @@ a:hover {
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 3rem;
 	text-align: center;
 }
 
 h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
 	font-size: 1rem;
 }
 
