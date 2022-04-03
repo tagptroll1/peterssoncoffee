@@ -5,17 +5,24 @@
 	import Twitter from '$lib/icons/Twitter.svelte'; 
 	import LinkedIn from '$lib/icons/Linkedin.svelte';
 	import Github from '$lib/icons/Github.svelte';
+import Xml from '$lib/icons/Xml.svelte';
 </script>
 
 <Header />
 
 <aside>
+	<a href="https://www.github.com/tagptroll1/peterssoncoffee" title="Source code">
+		<Xml />
+	</a>
+
 	<a href="https://www.twitter.com/tagptroll1">
 		<Twitter />
 	</a>
+	
 	<a href="https://www.linkedin.com/in/thomasagpetersson/">
 		<LinkedIn />
 	</a>
+	
 	<a href="https://www.github.com/tagptroll1">
 		<Github />
 	</a>

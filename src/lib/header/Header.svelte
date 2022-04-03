@@ -17,10 +17,6 @@
 				<a sveltekit:prefetch href="/projects">Projects</a>
 			</li>
 
-			<li class:active={$page.url.pathname === '/contact'}>
-				<a sveltekit:prefetch href="/contact">Contact me</a>
-			</li>
-
 			<li>
 				<a class="resume" href="resume.pdf" download="Thomas Petersson Resume">Resume</a>
 			</li>
@@ -37,7 +33,7 @@
 		justify-content: space-around;
 		flex-direction: row-reverse;
 		background-color: unset;
-		width: 500px;
+		width: 350px;
 		margin-left: auto;
 		--background: rgba(255, 255, 255, 0.9);
 		background-color: var(--background);
