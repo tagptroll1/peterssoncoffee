@@ -1,7 +1,7 @@
 <script>
     export let filename;
 
-    import File from "svelte-material-icons/FileOutline.svelte";
+    import File from "$lib/icons/FileOutline.svelte";
 </script>
 
 <File/> {filename}

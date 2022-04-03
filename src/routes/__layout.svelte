@@ -2,9 +2,9 @@
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
 
-	import Twitter from 'svelte-material-icons/Twitter.svelte'; 
-	import LinkedIn from 'svelte-material-icons/LinkedIn.svelte';
-	import Github from 'svelte-material-icons/Github.svelte';
+	import Twitter from '$lib/icons/Twitter.svelte'; 
+	import LinkedIn from '$lib/icons/LinkedIn.svelte';
+	import Github from '$lib/icons/Github.svelte';
 </script>
 
 <Header />
