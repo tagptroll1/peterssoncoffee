@@ -38,10 +38,12 @@
 		--background: rgba(255, 255, 255, 0.9);
 		background-color: var(--background);
 		background-size: contain;
-
-
 	}
 
+	@media (max-width: 1000px) {
+		header
+		{width: 100%;}
+	}
 
 	nav {
 		display: flex;
@@ -64,7 +66,7 @@
 		position: relative;
 		padding: 0;
 		margin: 0;
-		height: 3em;
+		height: 3rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;

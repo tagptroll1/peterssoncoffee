@@ -47,7 +47,6 @@ import Xml from '$lib/icons/Xml.svelte';
 	aside {
 		height: 100%;
 		padding-bottom: 160px;
-
 		display: flex;
 		flex-direction: column-reverse;
 		gap: 1rem;
@@ -74,6 +73,16 @@ import Xml from '$lib/icons/Xml.svelte';
 		left: 50%;
 
 		background: var(--text-color);
+	}
+
+	@media (max-width: 1000px) {
+		aside {
+			display: none;
+		}
+
+		aside::after {
+			content: unset;
+		}
 	}
 
 </style>
