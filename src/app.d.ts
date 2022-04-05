@@ -13,3 +13,16 @@ declare namespace App {
 
 	// interface Stuff {}
 }
+
+export interface GithubRepository {
+	name: string;
+	full_name: string;
+	url: string;
+	html_url: string;
+	created_at: Date;
+	updated_at: Date;
+	pushed_at: Date;
+	language: string;
+	score: number;
+	description: string;
+}
