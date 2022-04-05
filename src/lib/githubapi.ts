@@ -3,6 +3,9 @@ const tagptrollGithubUrl = `https://api.github.com/search/repositories?q=user:ta
 // Language: typescript
 // Path: src\lib\githubapi.ts
 
+export function getToken(){
+     return import.meta.env.VITE_GITHUB_TOKEN;
+ }
 // export a async function get get a single repository from github api with token auth
 export async function getRepository(project) {
     // check if project is in tagptrollgithuburl cache entry
