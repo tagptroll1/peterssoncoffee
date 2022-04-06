@@ -56,10 +56,10 @@ export async function get() {
     if (a.score < b.score) {
       return 1;
     }
-    if (a.updated_at > b.updated_at) {
+    if (a.pushed_at > b.pushed_at) {
       return -1;
     }
-    if (a.updated_at < b.updated_at) {
+    if (a.pushed_at < b.pushed_at) {
       return 1;
     }
     return 0;
