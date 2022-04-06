@@ -2,7 +2,7 @@ const cache = {};
 const tagptrollGithubUrl = `https://api.github.com/search/repositories?q=user:tagptroll1`;
 
 // export a async function get get a single repository from github api with token auth
-export async function getRepository(project) {
+export async function getRepository(project, token) {
     // check if project is in tagptrollgithuburl cache entry
     if (cache[tagptrollGithubUrl] && cache[tagptrollGithubUrl].items?.find((f) => f.name === project)) {
         return cache[tagptrollGithubUrl].items?.find((f) => f.name === project);
@@ -18,7 +18,7 @@ export async function getRepository(project) {
 
 	const url = `https://api.github.com/repos/tagptroll1/${project}`;
 	const headers = {
-		Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`,
+		Authorization: `token ${token}`,
         'Content-Type': 'application/json',
 	};
 
@@ -33,7 +33,7 @@ export async function getRepository(project) {
 }
 
 // export a async function to get repositories from github api with basic api token auth
-export async function getRepositories() {
+export async function getRepositories(token) {
     // if the url is in the cache and not expired, return the cached value
     if (cache[tagptrollGithubUrl] && cache[tagptrollGithubUrl].expires > Date.now()) {
         return cache[tagptrollGithubUrl].data;
@@ -46,7 +46,7 @@ export async function getRepositories() {
     const response = await fetch(tagptrollGithubUrl, {
         method: 'GET',
         headers: {
-        'Authorization': `token ${import.meta.env.VITE_GITHUB_TOKEN}`,
+        'Authorization': `token ${token}`,
         'Content-Type': 'application/json',
         },
     });

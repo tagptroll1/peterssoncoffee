@@ -2,7 +2,7 @@ import { getRepositories } from '$lib/githubapi';
 
 /** @type {import().RequestHandler} */
 export async function get() {
-	const githubRepositories = await getRepositories();
+	const githubRepositories = await getRepositories(import.meta.env.VITE_GITHUB_TOKEN);
 
 	//get full_name, url, created_at, updated_at, pushed_at, languge, score from the response and group by private/public
 	const projects = githubRepositories.items.reduce((acc, repo) => {

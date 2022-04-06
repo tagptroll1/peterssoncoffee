@@ -2,7 +2,7 @@ import { getRepository } from '$lib/githubapi';
 
 /** @type {import('./[project]').RequestHandler} */
 export async function get({ params }) {
-	const githubRepository = await getRepository(params.project);
+	const githubRepository = await getRepository(params.project, import.meta.env.VITE_GITHUB_TOKEN);
 
 	//get full_name, url, created_at, updated_at, pushed_at, languge, score from the response and group by private/public
     const {
