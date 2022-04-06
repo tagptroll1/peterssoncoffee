@@ -1,4 +1,3 @@
-import '$lib/githubapi';
 import { getRepository } from '$lib/githubapi';
 
 /** @type {import('./[project]').RequestHandler} */
