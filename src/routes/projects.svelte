@@ -10,7 +10,7 @@
     {#each projects.public as project}
         <article>
             <a href={`/project-${project.name}`}>
-                <h2>{project.name} ⭐{project.score}</h2>
+                <h2>{project.name}</h2>
                 <p>{project.description ?? "No Description"}</p>
             </a>
         </article>
@@ -21,9 +21,9 @@
     {#each projects.private as project}
         <article>
             <a href={`/project-${project.name}`}>
-                <h2>{project.name} ⭐{project.score}</h2>
+                <h2>{project.name}</h2>
                 <p>{project.description ?? "No Description"}</p>
-            </a>
+            </a> 
         </article>
     {/each}
 

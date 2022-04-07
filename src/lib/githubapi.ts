@@ -31,7 +31,7 @@ export async function getRepository(project, token) {
     };
 	return json;
 }
-
+ 
 // export a async function to get repositories from github api with basic api token auth
 export async function getRepositories(token) {
     // if the url is in the cache and not expired, return the cached value

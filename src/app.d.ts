@@ -25,4 +25,5 @@ export interface GithubRepository {
 	language: string;
 	score: number;
 	description: string;
+	stargazers_count: number;
 }

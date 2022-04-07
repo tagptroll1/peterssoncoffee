@@ -18,7 +18,8 @@ export async function get() {
 			score,
 			description,
 			archived,
-			disabled
+			disabled,
+			stargazers_count
 		} = repo;
 
 		// if achieved or disabled, skip
@@ -37,7 +38,8 @@ export async function get() {
 			pushed_at,
 			language,
 			score,
-			description
+			description,
+			stargazers_count
 		};
 
 		if (!acc[group]) {
@@ -50,10 +52,10 @@ export async function get() {
 
   // sort public and private group by score and updated_at
   projects.public = projects.public.sort((a, b) => {
-    if (a.score > b.score) {
+    if (a.stargazers_count > b.stargazers_count) {
       return -1;
     }
-    if (a.score < b.score) {
+    if (a.stargazers_count < b.stargazers_count) {
       return 1;
     }
     if (a.pushed_at > b.pushed_at) {
@@ -66,10 +68,10 @@ export async function get() {
   });
 
   projects.private = projects.private.sort((a, b) => {
-    if (a.score > b.score) {
+    if (a.stargazers_count > b.stargazers_count) {
       return -1;
     }
-    if (a.score < b.score) {
+    if (a.stargazers_count < b.stargazers_count) {
       return 1;
     }
     if (a.pushed_at > b.pushed_at) {
