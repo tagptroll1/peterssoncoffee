@@ -6,6 +6,13 @@
 
 <section>
     NB! This is a work in progress
+    <h1>Websites</h1>
+    <ul>
+        <li>
+            <a href="https://cryptopris.no/">Cryptopris</a>
+        </li>
+    </ul>
+
     <h1>Public repositories</h1>
     {#each projects.public as project}
         <article>
@@ -35,6 +42,11 @@
         flex-direction: column;
         align-items: center;
 
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
     }
     h2 {
         margin: 1rem 0 0;
