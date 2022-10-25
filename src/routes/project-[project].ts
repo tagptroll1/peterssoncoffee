@@ -20,7 +20,7 @@ export async function get({ params }) {
         disabled
     } = githubRepository;
 
-    // if achieved or disabled, skip
+    // if archived or disabled, skip
     if (archived || disabled) {
         return {};
     }
