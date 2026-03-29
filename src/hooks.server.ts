@@ -5,8 +5,6 @@ export const handle: Handle = async ({ event, resolve }) => {
 	const userid = event.cookies.get('userid');
 	event.locals.userid = userid ?? uuid();
 
-	const response = await resolve(event);
-
 	if (!userid) {
 		event.cookies.set('userid', event.locals.userid, {
 			path: '/',
@@ -14,5 +12,5 @@ export const handle: Handle = async ({ event, resolve }) => {
 		});
 	}
 
-	return response;
+	return resolve(event);
 };
