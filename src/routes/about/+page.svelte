@@ -14,14 +14,10 @@
 	<section>
 		<p>
 			I'm Thomas, a backend developer at <a href="https://tv2.no">TV 2</a> in Bergen. I work on
-			APIs and image handling in Go, with Kubernetes, Kafka, Redis and Google Cloud in the stack. We
-			use Aiven for managing Kafka, Postgres and schema registries. A good chunk of the job is
-			cross-team coordination.
+			APIs and image handling in Go, with Kubernetes, Kafka, Redis and Google Cloud in the stack.
 		</p>
 		<p>
-			I've built internal tooling: a data broker hub, browser extensions for grabbing images and
-			IDs, and some MCP servers and agents. I write code by hand and use AI tools (Claude Code,
-			OpenCode) to speed up boilerplating and lookups.
+			I love spending time building tools to simplify workflows, give users super powers and spotting performance flaws or security holes.
 		</p>
 		<p>
 			Previously at <a href="https://unimicro.no">Uni Micro AS</a> doing fullstack: React and

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 
-	let { data }: { data: PageData } = $props();
+	const { data }: { data: PageData } = $props();
 </script>
 
 <svelte:head>
@@ -10,6 +10,7 @@
 
 <section>
 	<p>NB! This is a work in progress</p>
+	<p>All these repos are fetched and shown in random order</p>
 
 	<h1>Public repositories</h1>
 	{#each data.projects.public ?? [] as project}
