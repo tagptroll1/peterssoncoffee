@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 </script>
 
 <header>
@@ -9,19 +9,18 @@
 		</svg>
 
 		<ul>
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="/about">About</a>
+			<li class:active={page.url.pathname === '/'}><a href="/">Home</a></li>
+			<li class:active={page.url.pathname === '/about'}>
+				<a href="/about">About</a>
 			</li>
-			<li class:active={$page.url.pathname === '/projects'}>
-				<a sveltekit:prefetch href="/projects">Projects</a>
+			<li class:active={page.url.pathname === '/projects'}>
+				<a href="/projects">Projects</a>
 			</li>
 
 			<li>
 				<a class="resume" href="resume.pdf" download="Thomas Petersson Resume">Resume</a>
 			</li>
 		</ul>
-
 	</nav>
 </header>
 
@@ -41,8 +40,9 @@
 	}
 
 	@media (max-width: 1000px) {
-		header
-		{width: 100%;}
+		header {
+			width: 100%;
+		}
 	}
 
 	nav {
@@ -84,10 +84,10 @@
 
 	li .resume {
 		background: none;
-		border: var(--accent-color) 1px solid;;
+		border: var(--accent-color) 1px solid;
 		border-radius: 5px;
 		color: var(--accent-color);
-		
+
 		height: 2rem;
 	}
 

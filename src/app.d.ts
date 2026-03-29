@@ -1,17 +1,15 @@
-/// <reference types="@sveltejs/kit" />
-
-// See https://kit.svelte.dev/docs/types#the-app-namespace
+// See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
-declare namespace App {
-	interface Locals {
-		userid: string;
+declare global {
+	namespace App {
+		interface Locals {
+			userid: string;
+		}
+		// interface Error {}
+		// interface PageData {}
+		// interface PageState {}
+		// interface Platform {}
 	}
-
-	// interface Platform {}
-
-	// interface Session {}
-
-	// interface Stuff {}
 }
 
 export interface GithubRepository {

@@ -2,10 +2,12 @@
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
 
-	import Twitter from '$lib/icons/Twitter.svelte'; 
+	import Twitter from '$lib/icons/Twitter.svelte';
 	import LinkedIn from '$lib/icons/Linkedin.svelte';
 	import Github from '$lib/icons/Github.svelte';
-import Xml from '$lib/icons/Xml.svelte';
+	import Xml from '$lib/icons/Xml.svelte';
+
+	let { children } = $props();
 </script>
 
 <Header />
@@ -18,19 +20,18 @@ import Xml from '$lib/icons/Xml.svelte';
 	<a href="https://www.twitter.com/tagptroll1">
 		<Twitter />
 	</a>
-	
+
 	<a href="https://www.linkedin.com/in/thomasagpetersson/">
 		<LinkedIn />
 	</a>
-	
+
 	<a href="https://www.github.com/tagptroll1">
 		<Github />
 	</a>
 </aside>
 <main>
-	<slot />
+	{@render children()}
 </main>
-
 
 <style>
 	main {
@@ -54,7 +55,7 @@ import Xml from '$lib/icons/Xml.svelte';
 		position: fixed;
 		bottom: 0;
 		left: 5%;
-		
+
 		font-size: 3rem;
 	}
 
@@ -84,5 +85,4 @@ import Xml from '$lib/icons/Xml.svelte';
 			content: unset;
 		}
 	}
-
 </style>

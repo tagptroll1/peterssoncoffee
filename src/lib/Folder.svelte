@@ -1,13 +1,10 @@
 <script>
     import File from './File.svelte';
     import FolderIcon from './FolderIcon.svelte';
+    import Folder from './Folder.svelte';
     import { toggleAll } from "./folderToggleStore";
-    
-    export let expanded = false;
-    export let showExpandAll = false;
-    export let name;
-    export let files;
-    export let level = 1;
+
+    let { expanded = $bindable(false), showExpandAll = false, name, files, level = 1 } = $props();
 
     function toggle() {
         expanded = !expanded;
@@ -23,21 +20,21 @@
 <div class="header">
 
 {#if level === 1}
-    <h2 on:click={toggle}>
+    <button class="heading h2" onclick={toggle}>
         <FolderIcon {expanded} {name}/>
-    </h2>
+    </button>
 {:else if level === 2}
-    <h3 on:click={toggle}>
+    <button class="heading h3" onclick={toggle}>
         <FolderIcon {expanded} {name}/>
-    </h3>
+    </button>
 {:else if level === 3}
-    <h4 on:click={toggle}>
+    <button class="heading h4" onclick={toggle}>
         <FolderIcon {expanded} {name}/>
-    </h4>
+    </button>
 {/if}
 
 {#if showExpandAll}
-    <button on:click={toggleAllHandler}>Toggle all</button>
+    <button onclick={toggleAllHandler}>Toggle all</button>
 {/if}
 </div>
 
@@ -47,7 +44,7 @@
     <ul>
         {#each files as file}
             {#if file.files}
-                <svelte:self {...file} level={level + 1} />
+                <Folder {...file} level={level + 1} />
             {:else}
                 <li>
                     <File filename={file}/>
@@ -76,14 +73,22 @@
         margin-bottom: 7px;
     }
 
-    h2, h3, h4, li
-    {
+    button.heading {
+        text-decoration: none;
+        color: var(--heading-color);
         font-family: var(--font-mono);
         margin: .5rem;
+        padding: 0;
+        font-weight: 400;
     }
 
-    h2, h3, h4 {
-        cursor: pointer;
+    button.h2 { font-size: 2rem; }
+    button.h3 { font-size: 1.5rem; }
+    button.h4 { font-size: 1rem; }
+
+    li {
+        font-family: var(--font-mono);
+        margin: .5rem;
     }
 
     ul {
