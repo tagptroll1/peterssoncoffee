@@ -1,5 +1,7 @@
 <script lang="ts">
 	import SkillList from '$lib/SkillList.svelte';
+
+	const years = new Date().getFullYear() - 2018;
 </script>
 
 <svelte:head>
@@ -23,7 +25,7 @@
 		</p>
 		<p>
 			Previously at <a href="https://unimicro.no">Uni Micro AS</a> doing fullstack: React and
-			Angular frontend, REST APIs in ASP.NET.
+			Angular frontend, REST APIs in ASP.NET. {years} years in software total.
 		</p>
 		<SkillList />
 	</section>
