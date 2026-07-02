@@ -3,8 +3,9 @@ import { env } from '$env/dynamic/private';
 
 export async function load() {
 	const githubRepositories = await getRepositories(env.GITHUB_TOKEN);
+	const items: Record<string, unknown>[] = githubRepositories?.items ?? [];
 
-	const projects = githubRepositories.items.reduce(
+	const projects = items.reduce(
 		(acc: Record<string, object[]>, repo: Record<string, unknown>) => {
 			const {
 				name,

@@ -70,7 +70,7 @@
                 },
                 {
                     name: "Tools",
-                    files: ["Neovim", "Tmux", "Nginx", "Rust"]
+                    files: ["Neovim", "Tmux", "Nginx"]
                 }
             ]
         },

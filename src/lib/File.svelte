@@ -21,5 +21,11 @@
         display: inline-flex;
         align-items: center;
         gap: 0.4rem;
+        color: var(--text-muted);
+        transition: color var(--dur-base) var(--ease-out);
+    }
+
+    .file:hover {
+        color: var(--text-strong);
     }
 </style>

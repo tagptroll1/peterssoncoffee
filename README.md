@@ -1,7 +1,7 @@
-# Petersson.coffee
+# yesbutmaybe.no
 Is a webapp used as my personal portfolio and resume.
 
-[www.petersson.coffee](https://www.petersson.coffee)
+[www.yesbutmaybe.no](https://www.yesbutmaybe.no)
 
 Developed using [Svelte Kit](https://kit.svelte.dev)
 

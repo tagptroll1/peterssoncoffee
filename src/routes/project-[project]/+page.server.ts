@@ -5,7 +5,7 @@ import { error } from '@sveltejs/kit';
 export async function load({ params }) {
 	const githubRepository = await getRepository(params.project, env.GITHUB_TOKEN);
 
-	const { name, full_name, url, html_url, created_at, updated_at, pushed_at, language, score, description, archived, disabled } =
+	const { name, full_name, url, html_url, created_at, updated_at, pushed_at, language, score, description, archived, disabled, stargazers_count } =
 		githubRepository;
 
 	if (archived || disabled) {
@@ -13,6 +13,6 @@ export async function load({ params }) {
 	}
 
 	return {
-		repository: { name, full_name, url, html_url, created_at, updated_at, pushed_at, language, score, description }
+		repository: { name, full_name, url, html_url, created_at, updated_at, pushed_at, language, score, description, stargazers_count }
 	};
 }

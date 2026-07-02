@@ -11,73 +11,80 @@
 
 <Header />
 
-<aside>
-	<a href="https://www.github.com/tagptroll1/peterssoncoffee" title="Source code">
+<aside class="social-rail">
+	<a
+		href="https://www.github.com/tagptroll1/peterssoncoffee"
+		title="Source"
+		aria-label="Source"
+	>
 		<Xml />
 	</a>
 
-	<a href="https://www.linkedin.com/in/thomasagpetersson/">
+	<a
+		href="https://www.linkedin.com/in/thomasagpetersson/"
+		title="LinkedIn"
+		aria-label="LinkedIn"
+	>
 		<LinkedIn />
 	</a>
 
-	<a href="https://www.github.com/tagptroll1">
+	<a href="https://www.github.com/tagptroll1" title="GitHub" aria-label="GitHub">
 		<Github />
 	</a>
+
+	<span class="rail-line"></span>
 </aside>
+
 <main>
 	{@render children()}
 </main>
 
 <style>
 	main {
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
+		flex: 1;
 		width: 100%;
-		max-width: 1024px;
-		min-height: 80vh;
-		margin: 0 auto;
 		box-sizing: border-box;
 	}
 
-	aside {
-		height: 100%;
-		padding-bottom: 160px;
-		display: flex;
-		flex-direction: column-reverse;
-		gap: 1rem;
-
+	.social-rail {
 		position: fixed;
-		bottom: 0;
-		left: 5%;
+		bottom: 2.5%;
+		left: 2.5%;
+		z-index: 40;
 
-		font-size: 3rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-4);
+
+		font-size: 1.4rem;
 	}
 
-	aside a {
-		color: var(--text-color);
+	.social-rail a {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--text-muted);
+		transition:
+			color var(--dur-base) var(--ease-out),
+			transform var(--dur-fast) var(--ease-out);
 	}
 
-	aside::after {
-		content: '';
-		display: block;
+	.social-rail a:hover {
+		color: var(--accent);
+		transform: translateY(-1px);
+	}
+
+	.rail-line {
 		width: 1px;
-		height: 150px;
-
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-
-		background: var(--text-color);
+		height: 5.5rem;
+		margin-top: 0.4rem;
+		background: var(--border-strong);
 	}
 
-	@media (max-width: 1000px) {
-		aside {
+	@media (max-width: 1080px) {
+		.social-rail {
 			display: none;
-		}
-
-		aside::after {
-			content: unset;
 		}
 	}
 </style>
